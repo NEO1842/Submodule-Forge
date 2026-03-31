@@ -1,44 +1,77 @@
 # Submodule Forge
 
-This web application executes a series of Git operations to generate a folder under the user's home directory and register a specified repository as a submodule.
+Submodule Forge is a simple desktop tool that helps you manage Git submodules more easily.
 
-## Requirements
+It provides a graphical interface for organizing and working with multiple repositories inside a single project.
 
-- Node.js (version 14 or higher)
-- Git
-- npm (comes with Node.js)
+---
+
+## Features
+
+* Simple interface for Git submodule management
+* Organize multiple repositories in one place
+* Lightweight Electron desktop application
+* Easy setup
+
+---
 
 ## Installation
 
-1. **Install Node.js and Git** (if not already installed):
-   - Download from [nodejs.org](https://nodejs.org/) and [git-scm.com](https://git-scm.com/)
+Clone the repository:
 
-2. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/submodule-forge.git
-   cd submodule-forge
-   ```
-
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-## How to Run
-
-```bash
-node server.js
+```
+git clone https://github.com/NEO1842/Submodule-Forge.git
 ```
 
-Open your browser and go to `http://localhost:3000`.
+Move into the repository folder:
 
-## Notes
+```
+cd Submodule-Forge
+```
 
-- This application works on Windows, macOS, and Linux.
-- To push to `origin`, authentication credentials are required (username and token).
-- Authentication username supports only usernames (email addresses are not supported).
-- The submodule placement destination is specified as a "relative path within the base folder".
-  - Example: `my-submodule` → `my-workspace/my-submodule`
-- If you specify the "Repository URL to add submodule to", it will clone first and then add the submodule.
-- Tokens are not displayed in logs and are not saved in configuration files.
-# Submodule-Forge
+Move into the application folder:
+
+```
+cd "Submodule Forge"
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Start the application:
+
+```
+npm start
+```
+
+---
+
+## Requirements
+
+* Node.js
+* npm
+
+---
+
+## Preview
+
+Add a screenshot of the application here.
+
+```
+preview.png
+```
+
+---
+
+## Author
+
+NEO1842
+
+---
+
+## License
+
+MIT License

@@ -1,17 +1,22 @@
+<p align="center">
 ---English---
+</p>
+
+<p align="center">
+<img src="Submodule-Forge.png" width="1080">
+</p>
 
 # Submodule Forge
 
 Submodule Forge is a lightweight graphical tool that helps developers create and manage multiple Git submodules more easily.
 
----
-
 ## Features
 
-- Manage Git submodules with a simple interface
+- Create multiple Git submodules at once
+- Manage Git submodules through a graphical interface
 - Organize multiple repositories in one place
 - Lightweight Electron desktop application
-- Easy setup
+- Simple and easy setup
 
 ---
 
@@ -66,12 +71,6 @@ npm start
 
 ---
 
-## Preview
-
-![Submodule Forge](Submodule-Forge.png)
-
----
-
 ## Author
 
 NEO1842
@@ -87,7 +86,13 @@ MIT License
 https://github.com/NEO1842/Submodule-Forge/releases
 
 -----
+<p align="center">
 ---日本語---
+</p>
+
+<p align="center">
+<img src="Submodule-Forge.png" width="1080">
+</p>
 
 # Submodule Forge
 
@@ -149,10 +154,6 @@ npm start
 - Git
 
 ---
-
-## プレビュー
-
-![Submodule Forge](Submodule-Forge.png)
 
 #著者
 

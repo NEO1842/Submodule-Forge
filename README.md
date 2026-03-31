@@ -2,18 +2,16 @@
 
 # Submodule Forge
 
-Submodule Forge is a simple desktop tool that helps you manage Git submodules more easily.
-
-It provides a graphical interface for organizing and working with multiple repositories inside a single project.
+Submodule Forge is a lightweight desktop application that helps developers manage Git submodules more easily through a graphical interface.
 
 ---
 
 ## Features
 
-* Simple interface for Git submodule management
-* Organize multiple repositories in one place
-* Lightweight Electron desktop application
-* Easy setup
+- Manage Git submodules with a simple interface
+- Organize multiple repositories in one place
+- Lightweight Electron desktop application
+- Easy setup
 
 ---
 
@@ -76,19 +74,21 @@ NEO1842
 
 MIT License
 
+# Download the latest release from:
+
+https://github.com/NEO1842/Submodule-Forge/releases
+
 -----
 ---日本語---
 
 # Submodule Forge
 
-Submodule Forgeは、Gitサブモジュールをより簡単に管理できるシンプルなデスクトップツールです。
-
-単一のプロジェクト内で複数のリポジトリを整理し、操作するためのグラフィカルインターフェースを提供します。
+Submodule Forgeは、グラフィカルインターフェースを通じて開発者がGitサブモジュールをより簡単に管理できるようにする軽量なデスクトップアプリケーションです。
 
 ## 特徴
 
-* Gitサブモジュール管理のためのシンプルなインターフェース
-複数のリポジトリを1か所に整理する
+* シンプルなインターフェースでGitサブモジュールを管理する
+* 複数のリポジトリを1か所に整理する
 * 軽量な電子デスクトップアプリケーション
 * 簡単なセットアップ
 
@@ -142,3 +142,7 @@ NEO1842
 ## ライセンス
 
 MITライセンス
+
+# 最新のリリースを以下からダウンロードしてください:
+
+https://github.com/NEO1842/Submodule-Forge/releases

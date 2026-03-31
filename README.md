@@ -59,8 +59,6 @@ npm start
 
 ## Preview
 
-Add a screenshot of the application here.
-
 ![Submodule Forge](Submodule-Forge.png)
 
 ---
@@ -135,9 +133,7 @@ npm install
 
 ## プレビュー
 
-アプリケーションのスクリーンショットをここに追加してください。
-
-![サブモジュール フォージ](サブモジュールフォージ.png)
+![Submodule Forge](Submodule-Forge.png)
 
 #著者
 

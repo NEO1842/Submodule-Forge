@@ -51,8 +51,9 @@ npm start
 
 ## Requirements
 
-* Node.js
-* npm
+- Node.js
+- npm
+- Git
 
 ---
 
@@ -126,8 +127,11 @@ npm install
 
 # 要件
 
-* Node.js
-* npm
+- Node.js
+- npm
+- Git
+
+---
 
 ## プレビュー
 

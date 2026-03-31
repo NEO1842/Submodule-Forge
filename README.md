@@ -1,3 +1,5 @@
+---English---
+
 # Submodule Forge
 
 Submodule Forge is a simple desktop tool that helps you manage Git submodules more easily.
@@ -75,6 +77,7 @@ NEO1842
 MIT License
 
 -----
+---日本語---
 
 # Submodule Forge
 

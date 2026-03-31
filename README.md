@@ -47,6 +47,15 @@ Start the application:
 npm start
 ```
 
+## Usage
+
+1. Launch **Submodule Forge**.
+2. Select your main Git repository.
+3. Add one or more Git submodules by entering their repository URLs.
+4. Choose the folder where each submodule will be placed.
+5. Click **Create Submodules** to generate them automatically.
+6. Manage and organize your submodules from the graphical interface.
+
 ---
 
 ## Requirements
@@ -122,6 +131,16 @@ npm install
 ```
 npm start
 ```
+## 使い方
+
+1. **Submodule Forge** を起動します。
+2. メインの Git リポジトリを選択します。
+3. 追加したい Git サブモジュールのリポジトリURLを入力します。
+4. サブモジュールを配置するフォルダを選択します。
+5. **Create Submodules** をクリックすると自動で作成されます。
+6. GUIからサブモジュールを管理できます。
+
+---
 
 # 要件
 

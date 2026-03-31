@@ -60,9 +60,7 @@ npm start
 
 Add a screenshot of the application here.
 
-```
-preview.png
-```
+![Submodule Forge](Submodule-Forge.png)
 
 ---
 

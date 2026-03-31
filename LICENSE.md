@@ -1,3 +1,5 @@
+---English---
+
 MIT License
 
 Copyright (c) 2026 岡 村剛
@@ -26,6 +28,7 @@ If you use or redistribute this project, please include a link to the original r
 https://github.com/NEO1842/Submodule-Forge
 
 ---
+---Japanese---
 
 MITライセンス
 

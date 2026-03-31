@@ -117,10 +117,10 @@ cd "Submodule Forge"
 npm install
 ```
 
-アプリケーションを起動します:
+アプリケーションを起動:
 
 ```
-開始
+npm start
 ```
 
 # 要件

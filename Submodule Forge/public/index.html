@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submodule Forge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div class="hero-top">
+          <p class="app-name" data-i18n="appName">Submodule Forge</p>
+          <div class="language">
+            <label for="langSelect" data-i18n="langLabel">Language</label>
+            <select id="langSelect">
+              <option value="en" selected>English</option>
+              <option value="ja">日本語</option>
+            </select>
+          </div>
+        </div>
+        <p class="eyebrow" data-i18n="eyebrow">Git Automation Console</p>
+        <h1 data-i18n="title">Git Submodule Setup</h1>
+        <p class="subhead" data-i18n="subhead">
+          Generate a folder under the home directory, clone the specified repository, and register it as a submodule.
+        </p>
+      </header>
+
+      <nav class="tabs" role="tablist">
+        <button
+          type="button"
+          class="tab-button is-active"
+          data-tab="setup"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-setup"
+          data-i18n="tab.setup"
+        >
+          Setup
+        </button>
+        <button
+          type="button"
+          class="tab-button"
+          data-tab="guide"
+          role="tab"
+          aria-selected="false"
+          aria-controls="guideModal"
+          aria-haspopup="dialog"
+          data-i18n="tab.guide"
+        >
+          Guide
+        </button>
+      </nav>
+
+      <div id="panel-setup" class="panel-stack">
+        <section class="panel">
+          <form id="setupForm" class="form" autocomplete="off">
+            <div class="grid">
+              <label class="field">
+                <span data-i18n="label.originUrl">Target Repository URL (Optional)</span>
+                <input
+                  type="text"
+                  name="originUrl"
+                  placeholder="https://github.com/your/repo.git or git@github.com:your/repo.git"
+                  data-i18n-placeholder="placeholder.originUrl"
+                />
+                <small data-i18n="hint.originUrl">If specified, clones the repository before adding the submodule.</small>
+              </label>
+
+              <label class="field">
+                <span data-i18n="label.baseFolder">Base Folder Name (under home)</span>
+                <input type="text" name="baseFolderName" placeholder="my-workspace" data-i18n-placeholder="placeholder.baseFolder" />
+                <small data-i18n-html="hint.baseFolderExample">Example: <code>my-workspace</code></small>
+                <small data-i18n="hint.baseFolderAuto">If empty, it will be automatically generated from the repository name.</small>
+              </label>
+
+              <div id="submodulesContainer" class="full-width" style="display: contents;">
+                <div class="field">
+                  <span data-i18n="label.submoduleRepo">Submodule Repository URL</span>
+                  <div class="input-row">
+                    <input type="text" name="submoduleRepo" required data-i18n-placeholder="placeholder.submoduleRepo" />
+                    <button type="button" id="addSubmodule" class="token-toggle" style="font-size: 1.5rem;" title="Add">+</button>
+                  </div>
+                </div>
+                <label class="field">
+                  <span data-i18n="label.submodulePath">Submodule Path (relative to base folder)</span>
+                  <input type="text" name="submodulePath" data-i18n-placeholder="placeholder.submodulePath" />
+                  <small data-i18n-html="hint.submodulePathExample"></small>
+                </label>
+              </div>
+
+              <label class="field">
+                <span data-i18n="label.branch">Branch</span>
+                <input type="text" name="branch" value="main" />
+              </label>
+
+              <label class="field">
+                <span data-i18n="label.commitMessage">Commit Message</span>
+                <input type="text" name="commitMessage" value="Add submodule" />
+              </label>
+
+              <label class="field">
+                <span data-i18n="label.gitUsername">Git Username (Optional)</span>
+                <input
+                  type="text"
+                  name="gitUsername"
+                  placeholder="your-username"
+                  data-i18n-placeholder="placeholder.gitUsername"
+                />
+                <small data-i18n="hint.authStorage">Email addresses cannot be used.</small>
+              </label>
+
+              <label class="field">
+                <span data-i18n="label.gitToken">Git Token (Optional)</span>
+                <div class="input-row">
+                  <input
+                    type="password"
+                    name="gitToken"
+                    placeholder="ghp_***"
+                    data-i18n-placeholder="placeholder.gitToken"
+                  />
+                  <button
+                    type="button"
+                    class="token-toggle"
+                    data-toggle-token
+                    data-i18n-aria="action.showToken"
+                    aria-label="Show"
+                  >
+                    <span class="token-icon token-icon-show" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                          d="M12 5c-4.5 0-8.3 2.7-10 7 1.7 4.3 5.5 7 10 7s8.3-2.7 10-7c-1.7-4.3-5.5-7-10-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="token-icon token-icon-hide" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                          d="M3 4.3 4.3 3l16.7 16.7-1.3 1.3-3.2-3.2A10.6 10.6 0 0 1 12 19c-4.5 0-8.3-2.7-10-7a11 11 0 0 1 3.7-5.1L3 4.3Zm7.2 7.2a2 2 0 0 0 2.5 2.5l-2.5-2.5Zm6.6 6.6-2.2-2.2a4 4 0 0 1-5.7-5.7L6 7.3A9.1 9.1 0 0 0 3.7 12c1.6 3.2 4.6 5 8.3 5 1.7 0 3.3-.4 4.8-1.2Zm-3.5-10-2.3-2.3A9.9 9.9 0 0 1 12 5c4.5 0 8.3 2.7 10 7a10.8 10.8 0 0 1-3.4 4.4l-2-2a6 6 0 0 0 2-2.4c-1.6-3.2-4.6-5-8.3-5-.4 0-.7 0-1.1.1Z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <small data-i18n="hint.gitToken">Not displayed in logs and not saved in configuration files.</small>
+              </label>
+            </div>
+
+            <div class="toggles">
+              <label class="toggle">
+                <input type="checkbox" name="initRepo" checked />
+                <span data-i18n="toggle.initRepo">Initialize Git repository if it doesn't exist</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" name="runCommit" checked />
+                <span data-i18n="toggle.runCommit">Run commit</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" name="push" checked />
+                <span data-i18n="toggle.push">Push to origin (Authentication required)</span>
+              </label>
+            </div>
+
+            <div class="actions">
+              <button type="submit" id="runButton" data-i18n="action.runButton">Run Setup</button>
+              <p class="hint" data-i18n="action.hint">Execution logs will be displayed below.</p>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel output">
+          <div class="output-header">
+            <h2 data-i18n="output.title">Execution Log</h2>
+            <span id="status" class="status idle">Idle</span>
+          </div>
+          <pre id="output" class="log">Logs will appear here.</pre>
+        </section>
+      </div>
+
+      <div id="guideModal" class="modal" hidden>
+        <div class="modal-backdrop" data-guide-close></div>
+        <div class="modal-window panel" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+          <div class="output-header">
+            <h2 id="guideTitle" data-i18n="guide.title">Guide</h2>
+            <button type="button" class="modal-close" data-guide-close data-i18n-aria="guide.close">&times;</button>
+          </div>
+          <div class="guide" data-i18n-html="guide.content"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

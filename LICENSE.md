@@ -28,7 +28,7 @@ If you use or redistribute this project, please include a link to the original r
 https://github.com/NEO1842/Submodule-Forge
 
 ---
----Japanese---
+---日本語---
 
 MITライセンス
 

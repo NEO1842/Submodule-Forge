@@ -1,3 +1,5 @@
+<h1 align="center">Submodule Forge</h1>
+
 <p align="center">
 ---English---
 </p>
@@ -86,6 +88,9 @@ MIT License
 https://github.com/NEO1842/Submodule-Forge/releases
 
 -----
+
+<h1 align="center">Submodule Forge</h1>
+
 <p align="center">
 ---日本語---
 </p>

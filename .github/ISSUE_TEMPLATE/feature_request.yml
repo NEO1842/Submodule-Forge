@@ -1,26 +1,30 @@
----
 name: "✨ Feature Request"
-about: "Suggest a new feature or improvement"
+description: "Suggest a new feature or improvement"
 title: "[FEATURE] "
 labels: ["enhancement"]
 assignees: ["NEO1842"]
----
 
-## 💡 Problem
-What problem does this solve?  
-(Example: "I'm frustrated when...")
+body:
+  - type: textarea
+    attributes:
+      label: "💡 Problem"
+      description: "What problem does this solve?"
+    validations:
+      required: true
 
----
+  - type: textarea
+    attributes:
+      label: "🚀 Proposed Solution"
+      description: "Describe your idea"
+    validations:
+      required: true
 
-## 🚀 Proposed Solution
-Describe what you want to happen.
+  - type: textarea
+    attributes:
+      label: "🔄 Alternatives"
+      description: "Any alternative solutions?"
 
----
-
-## 🔄 Alternatives
-Describe alternatives you've considered.
-
----
-
-## 📸 Additional Context
-Add screenshots or extra details here.
+  - type: textarea
+    attributes:
+      label: "📸 Additional Context"
+      description: "Screenshots or extra info"

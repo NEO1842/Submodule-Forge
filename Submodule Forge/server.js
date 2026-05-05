@@ -5,6 +5,7 @@ const os = require('os');
 const { spawn } = require('child_process');
 
 const PORT = Number.parseInt(process.env.PORT || '3000', 10);
+const HOST = '127.0.0.1';
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
 const MIME_TYPES = {
@@ -411,7 +412,7 @@ const server = http.createServer((req, res) => {
   sendText(res, 405, 'Method Not Allowed');
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, HOST, () => {
   // eslint-disable-next-line no-console
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://${HOST}:${PORT}`);
 });

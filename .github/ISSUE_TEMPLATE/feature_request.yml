@@ -1,0 +1,26 @@
+---
+name: "✨ Feature Request"
+about: "Suggest a new feature or improvement"
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: ["NEO1842"]
+---
+
+## 💡 Problem
+What problem does this solve?  
+(Example: "I'm frustrated when...")
+
+---
+
+## 🚀 Proposed Solution
+Describe what you want to happen.
+
+---
+
+## 🔄 Alternatives
+Describe alternatives you've considered.
+
+---
+
+## 📸 Additional Context
+Add screenshots or extra details here.

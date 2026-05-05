@@ -1,0 +1,23 @@
+name: "📝 General Issue"
+description: "General questions or discussions"
+title: "[ISSUE] "
+labels: ["question"]
+assignees: ["NEO1842"]
+
+body:
+  - type: textarea
+    attributes:
+      label: "📝 Description"
+      description: "Describe your issue"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "💡 Details"
+      description: "Add more context"
+
+  - type: textarea
+    attributes:
+      label: "🎯 Goal"
+      description: "What do you want to achieve?"
